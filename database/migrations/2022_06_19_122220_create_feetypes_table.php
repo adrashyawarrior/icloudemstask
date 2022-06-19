@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('branches', function (Blueprint $table) {
+        Schema::create('feetypes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->foreignId('feecategory_id')->references('id')->on('feecategories');
+            $table->foreignId('feecollectiontype_id')->references('id')->on('feecollectiontypes');
+            $table->foreignId('branch_id')->references('id')->on('branches');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('branches');
+        Schema::dropIfExists('feetypes');
     }
 };

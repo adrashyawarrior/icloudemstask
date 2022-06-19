@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\DataImportComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'welcome')->name('home');
+Route::get('/import', DataImportComponent::class)->name('import');
