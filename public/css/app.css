@@ -743,6 +743,12 @@ input:invalid, textarea:invalid, select:invalid {
 .w-5 {
   width: 1.25rem;
 }
+.w-64 {
+  width: 16rem;
+}
+.w-32 {
+  width: 8rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -838,6 +844,9 @@ input:invalid, textarea:invalid, select:invalid {
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-16 {
+  padding: 4rem;
 }
 .py-12 {
   padding-top: 3rem;
